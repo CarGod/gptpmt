@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "gptpmt",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "GPT Prompt",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/CarGod/gptpmt.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Luffy Liu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/CarGod/gptpmt/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/CarGod/gptpmt#readme",
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",

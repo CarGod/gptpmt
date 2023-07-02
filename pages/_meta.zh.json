@@ -1,0 +1,17 @@
+{
+  "index": "项目介绍",
+  "preface": "先导篇",
+  "foundation": "基础篇",
+  "advance": "进阶篇",
+  "practice": "实战篇",
+  "contact": {
+    "title": "联系我",
+    "type": "page",
+    "newWindow": true
+  },
+  "about": {
+    "title": "关于此项目",
+    "type": "page",
+    "newWindow": true
+  }
+}

@@ -1,23 +1,33 @@
-# Nextra Docs Template 
+# gptpmt
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+## 中文
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+为人类编写的 Prompt Engineering 最佳实践指南。
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+[**免费阅读 →**](https://gptpmt.com)
 
-## Quick Start
+### 本地开发
 
-Click the button to clone this repository and deploy it on Vercel:
+首先，clone本项目到本地，在根目录通过 `pnpm i` 安装项目依赖。
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+然后，通过 `pnpm dev` 启动开发服务器，访问 localhost:3000 即可。
 
-## Local Development
+### 许可
 
-First, run `pnpm i` to install the dependencies.
+本项目遵循 MIT 许可协议。
+
+## English
+
+Prompt Engineering best practices guidebook, written for humans.
+
+[**Read for Free →**](https://gptpmt.com)
+
+### Local Development
+
+First, clone this project to your local machine. Then, in the root directory, run `pnpm i` to install the project dependencies.
 
 Then, run `pnpm dev` to start the development server and visit localhost:3000.
 
-## License
+### License
 
 This project is licensed under the MIT License.
