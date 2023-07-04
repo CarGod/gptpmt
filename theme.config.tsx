@@ -32,6 +32,7 @@ const config: DocsThemeConfig = {
         <meta property="og:title" content="GPT Prompt" />
         <meta property="og:description" content="Prompt Engineering best practices guidebook, written for humans." />
         <meta name="baidu-site-verification" content="codeva-HYkljzisrI" />
+        <meta name="msvalidate.01" content="8CC7334366FD7EDEF9575DB293A02096" />
         <meta
           name="og:title"
           content={title ? title + ' | GPT Prompt' : 'GPT Prompt'}
