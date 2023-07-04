@@ -31,6 +31,7 @@ const config: DocsThemeConfig = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="GPT Prompt" />
         <meta property="og:description" content="Prompt Engineering best practices guidebook, written for humans." />
+        <meta name="baidu-site-verification" content="codeva-HYkljzisrI" />
         <meta
           name="og:title"
           content={title ? title + ' | GPT Prompt' : 'GPT Prompt'}
