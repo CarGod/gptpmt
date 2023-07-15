@@ -4,6 +4,13 @@ const withNextra = require('nextra')({
 })
 
 module.exports = withNextra({
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./scripts/generate-sitemap')
+    }
+
+    return config
+  },
   i18n: {
     locales: ['zh'],
     defaultLocale: 'zh',
