@@ -27,15 +27,14 @@ const config: DocsThemeConfig = {
     const { title } = useConfig()
     return (
       <>
-        <title>{title ? title + ' | GPT Prompt' : 'GPT Prompt'} </title>
+        <title>{title ? title + ' | GPTPMT' : 'GPTPMT'}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="GPT Prompt" />
-        <meta property="og:description" content="Prompt Engineering best practices guidebook, written for humans." />
+        <meta property="og:title" content={title ? title + ' | GPTPMT' : 'GPTPMT'} />
         <meta name="baidu-site-verification" content="codeva-HYkljzisrI" />
         <meta name="msvalidate.01" content="8CC7334366FD7EDEF9575DB293A02096" />
         <meta
           name="og:title"
-          content={title ? title + ' | GPT Prompt' : 'GPT Prompt'}
+          content={title ? title + ' | GPTPMT' : 'GPTPMT'}
         />
         <link rel="icon" href="/chatgpt-light.svg" type="image/svg+xml" />
 

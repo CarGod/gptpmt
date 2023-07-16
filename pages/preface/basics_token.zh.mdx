@@ -1,23 +1,20 @@
-# 什么是Tokens？
+# 什么是 Tokens？
 
 import { NextSeo } from "next-seo";
-import { Callout } from 'nextra-theme-docs'
-import { Screenshot } from 'components/screenshot'
-import basics_token1 from '../../img/preface/basics_token1.png'
-import basics_token2 from '../../img/preface/basics_token2.png'
-import basics_token3 from '../../img/preface/basics_token3.png'
-import basics_token4 from '../../img/preface/basics_token4.png'
-import basics_token5 from '../../img/preface/basics_token5.png'
-import basics_token6 from '../../img/preface/basics_token6.png'
+import { Callout } from "nextra-theme-docs";
+import { Screenshot } from "components/screenshot";
+import basics_token1 from "../../img/preface/basics_token1.png";
+import basics_token2 from "../../img/preface/basics_token2.png";
+import basics_token3 from "../../img/preface/basics_token3.png";
+import basics_token4 from "../../img/preface/basics_token4.png";
+import basics_token5 from "../../img/preface/basics_token5.png";
+import basics_token6 from "../../img/preface/basics_token6.png";
 
-<NextSeo
-  title="什么是Tokens？"
-  description="本文介绍了ChatGPT模型中的概率和温度的概念。首先，文章解释了ChatGPT如何将文本拆分成基本的字和词，并使用唯一的ID进行标识。然后，文章描述了ChatGPT是如何将这些字和词组装成句子的，类似于人类说话的过程。文章指出，ChatGPT在组装句子时使用的是概率匹配机制，通过调用模型来预测下一个合适的字或词。此外，文章介绍了温度（temperature）的概念，它可以调整结果的多样性。较高的温度会产生更多样化的结果，而较低的温度则会倾向于选择概率最高的结果。最后，文章提供了关于如何调整温度的建议，以及对于开发者来说如何在使用OpenAI接口时设置温度参数。通过了解这些概念，读者可以更好地理解ChatGPT的工作原理，并在使用中做出相应的调整，以满足特定的需求和期望。"
-/>
+<NextSeo description="本文介绍了ChatGPT模型中的概率和温度的概念。首先，文章解释了ChatGPT如何将文本拆分成基本的字和词，并使用唯一的ID进行标识。然后，文章描述了ChatGPT是如何将这些字和词组装成句子的，类似于人类说话的过程。文章指出，ChatGPT在组装句子时使用的是概率匹配机制，通过调用模型来预测下一个合适的字或词。此外，文章介绍了温度（temperature）的概念，它可以调整结果的多样性。较高的温度会产生更多样化的结果，而较低的温度则会倾向于选择概率最高的结果。最后，文章提供了关于如何调整温度的建议，以及对于开发者来说如何在使用OpenAI接口时设置温度参数。通过了解这些概念，读者可以更好地理解ChatGPT的工作原理，并在使用中做出相应的调整，以满足特定的需求和期望。" />
 
 ## 发生了什么？
 
-当我们发送一个 Prompt 给ChatGPT的时候，发什么了什么？它是如何返回结果的？为什么结果总是不一样的？
+当我们发送一个 Prompt 给 ChatGPT 的时候，发什么了什么？它是如何返回结果的？为什么结果总是不一样的？
 
 ```text filename="Prompt" copy
 Hello, ChatGPT.
@@ -55,7 +52,7 @@ Hello! How can I assist you today?
 如果你突然变成一只猫
 ```
 
-你会发现，他们两个的答案都符合我的要求：将 `如果你突然` 变成 10个字的一句话，但他们的答案却各不相同。
+你会发现，他们两个的答案都符合我的要求：将 `如果你突然` 变成 10 个字的一句话，但他们的答案却各不相同。
 
 为什么？
 
@@ -115,17 +112,17 @@ Hello! How can I assist you today?
 因为 ... 所以 ...
 ```
 
-非常好，现在你已经完全理解ChatGPT的“模式”了 🎉
+非常好，现在你已经完全理解 ChatGPT 的“模式”了 🎉
 
-是的，ChatGPT也是这么工作的
+是的，ChatGPT 也是这么工作的
 
-ChatGPT将它所理解的一个个的“字”和“词”，称为 **标记(token)**
+ChatGPT 将它所理解的一个个的“字”和“词”，称为 **标记(token)**
 
 <Callout>
-一个简单的英语语法知识，复数形式要加 “s”，所以 一个 token，两个 tokens。
+  一个简单的英语语法知识，复数形式要加 “s”，所以 一个 token，两个 tokens。
 </Callout>
 
-## ChatGPT原理
+## ChatGPT 原理
 
 ### Token
 
@@ -135,25 +132,25 @@ ChatGPT将它所理解的一个个的“字”和“词”，称为 **标记(tok
 
 答案是我们的大脑会根据过去接触过的知识进行自动分割，比如我们看到了一个成语，记住以后下次总会直接说出这个成语，但如果是一句较长的话，我们可能使用的时候就是说一段，想一段。
 
-GPT也是这么做的，我们都知道GPT是一个使用很多数据训练出来的模型，由于GPT是一个语言类的模型，所以我们给它输入的都是文字类的资料。当GPT接收到资料的时候，会跟人类一样，将这些段落和句子划分成一个个独立存在的 “字词”，可以理解为语言的最小单位。
+GPT 也是这么做的，我们都知道 GPT 是一个使用很多数据训练出来的模型，由于 GPT 是一个语言类的模型，所以我们给它输入的都是文字类的资料。当 GPT 接收到资料的时候，会跟人类一样，将这些段落和句子划分成一个个独立存在的 “字词”，可以理解为语言的最小单位。
 
-GPT将这种最小单位称为 token，人类任何一门语言都有这种最小的语言单位，例如：英语中的单词，中文的单字等等。
+GPT 将这种最小单位称为 token，人类任何一门语言都有这种最小的语言单位，例如：英语中的单词，中文的单字等等。
 
-当然，GPT内部有自己独特的 tokens 分割逻辑，因为它几乎要处理世界上所有的语言，那每个语言的文字都是不同的，它需要有一种更高级和更适合机器理解的分割方法。不能简单的按照英语的一个单词，中文的一个单字这样来划分。
+当然，GPT 内部有自己独特的 tokens 分割逻辑，因为它几乎要处理世界上所有的语言，那每个语言的文字都是不同的，它需要有一种更高级和更适合机器理解的分割方法。不能简单的按照英语的一个单词，中文的一个单字这样来划分。
 
-#### ChatGPT如何进行 tokens 分割？
+#### ChatGPT 如何进行 tokens 分割？
 
-来看 ChatGPT官方提供的 tokens 分割查询工具：https://platform.openai.com/tokenizer
+来看 ChatGPT 官方提供的 tokens 分割查询工具：https://platform.openai.com/tokenizer
 
 <Screenshot src={basics_token1} alt="ChatGPT tokens 分割" />
 
 我们输入了一句英语：`I love GPT pmt.`
 
-这其中包含字母I，空格，单词，以及一个 . 号
+这其中包含字母 I，空格，单词，以及一个 . 号
 
-分割结果显示一共有 15个字符(每个 字母、空格、.号、就算1个字符，刚好15个字符)，7个 token。而且我们可以看出它的分割逻辑非常的神奇，它没有直接把每个单词或者是单个字母划分成一个token，而是用了一种看似很复杂的方式。
+分割结果显示一共有 15 个字符(每个 字母、空格、.号、就算 1 个字符，刚好 15 个字符)，7 个 token。而且我们可以看出它的分割逻辑非常的神奇，它没有直接把每个单词或者是单个字母划分成一个 token，而是用了一种看似很复杂的方式。
 
-它有 `I` 这样独立一个字母的 token，也有 ` love` 这种前面带了一个空格的token，还有 ` G` 这种一个字母前面带了一个空格的token，也有 `PT` 这样的两个字母组合的，还有单独一个 `.` 号的。
+它有 `I` 这样独立一个字母的 token，也有 ` love` 这种前面带了一个空格的 token，还有 ` G` 这种一个字母前面带了一个空格的 token，也有 `PT` 这样的两个字母组合的，还有单独一个 `.` 号的。
 
 为什么会这样？
 
@@ -165,7 +162,7 @@ GPT使用了一种 Byte Pair Encoding(BPE)的算法进行tokens分割，它将�
 需要注意的是，BPE 算法不是完全基于字符的切分方法，而是根据字符的频率进行子词切分。它通过不断的合并出现频繁的字符或字符组合来构建词汇表。在这个过程中，字符可能会被合并成更大的单元，这样可以更好的表示复杂词汇和短语。
 ```
 
-简单理解就是：GPT跟人一样，它会把看到的文字按照出现频率分割成一个最小单元，这个最小单元就是 token，而分割使用的算法就是 BPE算法。
+简单理解就是：GPT 跟人一样，它会把看到的文字按照出现频率分割成一个最小单元，这个最小单元就是 token，而分割使用的算法就是 BPE 算法。
 
 感兴趣的可以阅读维基百科的说明：https://en.wikipedia.org/wiki/Byte_pair_encoding
 
@@ -173,7 +170,7 @@ GPT使用了一种 Byte Pair Encoding(BPE)的算法进行tokens分割，它将�
 
 但是...
 
-#### 水土不服的ChatGPT
+#### 水土不服的 ChatGPT
 
 先别急着高兴，我们遇到了一个略微复杂的问题，那就是：中文如何处理？
 
@@ -185,64 +182,71 @@ GPT使用了一种 Byte Pair Encoding(BPE)的算法进行tokens分割，它将�
 
 而且如果真劈两半那我们还能认识这个字吗？就比如 `爱` 字。
 
-还是以 `I love GPT pmt.` 直接翻译为中文，让ChatGPT分割tokens看看会发生什么：
+还是以 `I love GPT pmt.` 直接翻译为中文，让 ChatGPT 分割 tokens 看看会发生什么：
 
 <Screenshot src={basics_token2} alt="ChatGPT tokens 分割" />
 
-结果显示有 11个字符：一个汉字、字母、空格、标点符号，都表示一个字符，刚好11个。
+结果显示有 11 个字符：一个汉字、字母、空格、标点符号，都表示一个字符，刚好 11 个。
 
-Token有10个，但是下面的字符怎么有一些是一个菱形的问号，看不懂是什么？
+Token 有 10 个，但是下面的字符怎么有一些是一个菱形的问号，看不懂是什么？
 
-还记得我们前面说的 “把汉字劈开” 的玩笑吗？GPT真的把汉字 “劈开” 了。
+还记得我们前面说的 “把汉字劈开” 的玩笑吗？GPT 真的把汉字 “劈开” 了。
 
-大家可能会觉得不可思议，汉字本身当然不可能直接劈开了，但是如果把汉字转换成另一种形式，比如UTF-8编码，那么就可以“劈开”了。
+大家可能会觉得不可思议，汉字本身当然不可能直接劈开了，但是如果把汉字转换成另一种形式，比如 UTF-8 编码，那么就可以“劈开”了。
 
 以下内容仅做了解：
 
 <Callout emoji="🤖">
 以下内容来自ChatGPT：
 
-当我们说到中文字符在 BPE 分词中的表现，需要先了解一些编码的基础知识。在计算机中，中文字符通常使用 Unicode 编码，而 Unicode 字符在计算机中是通过 UTF-8 编码进行存储的。UTF-8 编码是一种变长的编码方式，也就是说，不同的字符可能需要不同数量的字节进行表示。对于常见的 ASCII 字符，UTF-8 编码使用1个字节进行表示；对于某些特殊的拉丁字母，可能需要2个字节；对于大部分的中文字符，UTF-8 编码需要3个字节。
+当我们说到中文字符在 BPE 分词中的表现，需要先了解一些编码的基础知识。在计算机中，中文字符通常使用 Unicode 编码，而 Unicode 字符在计算机中是通过 UTF-8 编码进行存储的。UTF-8 编码是一种变长的编码方式，也就是说，不同的字符可能需要不同数量的字节进行表示。对于常见的 ASCII 字符，UTF-8 编码使用 1 个字节进行表示；对于某些特殊的拉丁字母，可能需要 2 个字节；对于大部分的中文字符，UTF-8 编码需要 3 个字节。
 
-假设我们有一个中文字符 "家"，它的 UTF-8 编码是：E5 AE B6，这是3个字节。当我们使用 BPE 对这个字符进行分词时，如果 BPE 的词汇表中没有 "家" 这个字符，但是有这3个字节的一部分，那么 "家" 可能会被拆分成几个部分。比如，它可能被拆分成两个 token，第一个 token 对应 UTF-8 编码的前两个字节 E5 AE，第二个 token 对应 UTF-8 编码的最后一个字节 B6。这就是中文字符在 BPE 分词中可能会被 "乱码" 的原因。
+假设我们有一个中文字符 "家"，它的 UTF-8 编码是：E5 AE B6，这是 3 个字节。当我们使用 BPE 对这个字符进行分词时，如果 BPE 的词汇表中没有 "家" 这个字符，但是有这 3 个字节的一部分，那么 "家" 可能会被拆分成几个部分。比如，它可能被拆分成两个 token，第一个 token 对应 UTF-8 编码的前两个字节 E5 AE，第二个 token 对应 UTF-8 编码的最后一个字节 B6。这就是中文字符在 BPE 分词中可能会被 "乱码" 的原因。
 
 然而，实际上在 GPT-2 和 GPT-3 的训练过程中，词汇表是通过在大量的文本数据上运行 BPE 算法得到的，这些文本数据包括各种语言，包括中文。因此，词汇表中应该包含许多常见的中文字符，这样就可以避免将一个中文字符拆分成多个字节。但是，对于那些在训练数据中很少出现的字符，可能还是会出现被拆分的情况。
 
 总的来说，中文字符在 BPE 分词中可能会被拆分的原因是：
+
 1. 这个字符在词汇表中不存在
 2. 这个字符的 UTF-8 编码可以被拆分成词汇表中存在的几个部分.这可能会导致一个中文字符被表示为一串无法直观理解的 token，但是对于模型来说，这些 token 仍然有意义，因为它们可以被正确地转换回原始的字符。
 
-拓展资料：[UTF-8编码](https://zh.wikipedia.org/wiki/UTF-8)
+拓展资料：[UTF-8 编码](https://zh.wikipedia.org/wiki/UTF-8)
+
 </Callout>
 
 简单来说就是：汉字被“劈开”了，而且“劈”的份数还不一样
 
-“我” 字，被分成了2个token：
+“我” 字，被分成了 2 个 token：
+
 <Screenshot src={basics_token3} alt="ChatGPT tokens 分割" />
 
-“爱” 字，被分成了3个token：
+“爱” 字，被分成了 3 个 token：
+
 <Screenshot src={basics_token4} alt="ChatGPT tokens 分割" />
 
 <Callout>
-  不难发现，同样意思的内容。英文 7个tokens，中文10个tokens，使用中文tokens会多一些。(以后会再提到这个知识点)
+  不难发现，同样意思的内容。英文
+  7个tokens，中文10个tokens，使用中文tokens会多一些。(以后会再提到这个知识点)
 </Callout>
 
 ### Token IDS
 
-值得一提的是，ChatGPT在分割完tokens后，会给每个token分配一个唯一的 **数字编码**，就跟身份证一样，通过这个数字编码我就能找到对应的那个 token。
+值得一提的是，ChatGPT 在分割完 tokens 后，会给每个 token 分配一个唯一的 **数字编码**，就跟身份证一样，通过这个数字编码我就能找到对应的那个 token。
 
-看一下 **我爱 GPT pmt。** 的每个token的id是什么：
+看一下 **我爱 GPT pmt。** 的每个 token 的 id 是什么：
 
 <Screenshot src={basics_token5} alt="ChatGPT token ids" />
 
-可以看到一共 10个数字编码，那按我们前面的理解 `22755, 239` 这两个代表的应该就是 “我”：
+可以看到一共 10 个数字编码，那按我们前面的理解 `22755, 239` 这两个代表的应该就是 “我”：
 
 <Screenshot src={basics_token6} alt="ChatGPT token ids" />
 
 果然！
 
-恭喜你 🎉，真正掌握了 GPT最核心的概念 Tokens 和 Token IDS。你已经理解了GPT背后工作的原理，这对于我们后面的课程，至关重要。
+恭喜你 🎉，真正掌握了 GPT 最核心的概念 Tokens 和 Token IDS。你已经理解了 GPT 背后工作的原理，这对于我们后面的课程，至关重要。
 
 <Callout type="info" emoji="💬">
-  恭喜学完本章节，欢迎到 [Github issues](https://github.com/CarGod/gptpmt/issues/new?title=Feedback%20for%20%E2%80%9CChatGPT%20Token%E2%80%9D&labels=feedback) 发表学习心得以及反馈问题 👏🏻
+  恭喜学完本章节，欢迎到 [Github
+  issues](https://github.com/CarGod/gptpmt/issues/new?title=Feedback%20for%20%E2%80%9CChatGPT%20Token%E2%80%9D&labels=feedback)
+  发表学习心得以及反馈问题 👏🏻
 </Callout>
