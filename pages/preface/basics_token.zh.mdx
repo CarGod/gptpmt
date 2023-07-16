@@ -1,5 +1,6 @@
 # 什么是Tokens？
 
+import { NextSeo } from "next-seo";
 import { Callout } from 'nextra-theme-docs'
 import { Screenshot } from 'components/screenshot'
 import basics_token1 from '../../img/preface/basics_token1.png'
@@ -8,6 +9,11 @@ import basics_token3 from '../../img/preface/basics_token3.png'
 import basics_token4 from '../../img/preface/basics_token4.png'
 import basics_token5 from '../../img/preface/basics_token5.png'
 import basics_token6 from '../../img/preface/basics_token6.png'
+
+<NextSeo
+  title="什么是Tokens？"
+  description="本文介绍了ChatGPT模型中的概率和温度的概念。首先，文章解释了ChatGPT如何将文本拆分成基本的字和词，并使用唯一的ID进行标识。然后，文章描述了ChatGPT是如何将这些字和词组装成句子的，类似于人类说话的过程。文章指出，ChatGPT在组装句子时使用的是概率匹配机制，通过调用模型来预测下一个合适的字或词。此外，文章介绍了温度（temperature）的概念，它可以调整结果的多样性。较高的温度会产生更多样化的结果，而较低的温度则会倾向于选择概率最高的结果。最后，文章提供了关于如何调整温度的建议，以及对于开发者来说如何在使用OpenAI接口时设置温度参数。通过了解这些概念，读者可以更好地理解ChatGPT的工作原理，并在使用中做出相应的调整，以满足特定的需求和期望。"
+/>
 
 ## 发生了什么？
 

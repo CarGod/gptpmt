@@ -3,6 +3,9 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import './style.css';
 
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -15,7 +18,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           gtag('config', 'G-5396QLYZJ2');
         `}
       </Script>
-
+      
+      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
       <Analytics />
     </>
