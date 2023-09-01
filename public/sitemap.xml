@@ -28,6 +28,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/foundation/grammar</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/preface/basics_probability</loc>
     <changefreq>hourly</changefreq>
   </url>
