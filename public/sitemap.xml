@@ -28,6 +28,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/advance/use_xml</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/preface/basics_probability</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -49,10 +53,6 @@
   </url>
   <url>
     <loc>http://localhost:3000/foundation/structured</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>http://localhost:3000/foundation/use_xml</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>
