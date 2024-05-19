@@ -28,6 +28,18 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/preface/basics_probability</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>http://localhost:3000/preface/basics_token</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>http://localhost:3000/preface/hello</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/foundation/grammar</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -40,15 +52,7 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/preface/basics_probability</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>http://localhost:3000/preface/basics_token</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>http://localhost:3000/preface/hello</loc>
+    <loc>http://localhost:3000/foundation/use_xml</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>
