@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import official_wechat from "/img/contact/official-wechat.jpg";
+import official_wechat from "/img/contact/official-wechat.png";
 
 export function WeChatContact() {
   return (
