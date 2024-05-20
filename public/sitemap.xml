@@ -28,6 +28,10 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/advance/use_xml</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/foundation/grammar</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -37,10 +41,6 @@
   </url>
   <url>
     <loc>http://localhost:3000/foundation/structured</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>http://localhost:3000/advance/use_xml</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

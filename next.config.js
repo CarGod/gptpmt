@@ -4,7 +4,9 @@ const withNextra = require('nextra')({
 })
 
 module.exports = withNextra({
-  webpack: (config, { isServer }) => {
+  webpack: (config, {
+    isServer
+  }) => {
     if (isServer) {
       require('./scripts/generate-sitemap')
     }
