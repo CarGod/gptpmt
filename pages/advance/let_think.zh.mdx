@@ -1,0 +1,112 @@
+# 思维链提示：如何通过逐步思考提升AI的准确性
+
+import { NextSeo } from "next-seo";
+import { Callout } from "nextra-theme-docs";
+import { WeChatContact } from "/components/wechat";
+import { Screenshot } from "components/screenshot";
+import drink_result from "../../img/advance/drink_result.png";
+
+<NextSeo
+  canonical="https://gptpmt.com/advance/let_think"
+  openGraph={{
+    title: "思维链提示：如何通过逐步思考提升AI的准确性 | GPTPMT",
+    url: "https://gptpmt.com/advance/let_think",
+    description:
+      "深入探讨如何使用思维链提示技术，让AI在回答问题前进行逐步思考，从而显著提升回答的准确性。本文详细讲解了Prompt优化的方法和技巧，是掌握AI思考模式的必备指南。",
+    type: "article",
+    article: {
+      authors: ["Luffy Liu"],
+      tags: ["思维链提示", "Prompt优化", "AI思考", "XML标签", "数据处理", "ChatGPT", "大模型"],
+    },
+  }}
+/>
+
+## 让 Ai 思考
+
+当我们面对一个复杂的问题或任务，怎么优化 `Prompt` 都没有效果时，可以让 Ai 在提供答案之前进行逐步的思考，通常这种方式能够显著提高Ai的准确性。
+
+这种技术被称为：**思维链(CoT) 提示**。
+
+## 为什么需要让 Ai 思考？
+
+想象一下，当我们突然被人喊去处理或者回答一个复杂的问题，如果不加思索的直接去做或者说出答案，我们的表现能好到哪里去？这时候大概率就会出错。
+
+同样的，如果做之前能够先思考一下，这个时候我们的表现通常会更好。
+
+这样的策略，在Ai大模型中同样适用。
+
+<Callout>
+  需要注意的是，Ai的思考必须要把思考内容输出出来，才是真正的思考，仅仅让Ai思考而不把思考过程输出出来，等于没有思考。
+</Callout>
+
+## 思维链(CoT) 提示
+
+### 如何逐步思考？
+
+最简单的方法就是，在我们的Prompt中增加，“**逐步思考**” 这句话，例如：
+
+```text filename="Prompt" copy
+科比和乔丹是否来自同一个国家？请逐步思考。
+```
+
+```text filename="ChatGPT" copy
+科比·布莱恩特（Kobe Bryant）来自美国，出生于宾夕法尼亚州费城，而迈克尔·乔丹（Michael Jordan）也是美国人，出生于纽约州布鲁克林区。因此，科比和乔丹都来自同一个国家，即美国。他们是两位享有盛誉的篮球运动员，对于篮球界都有着不可磨灭的影响力。
+```
+
+### 更复杂的问题
+
+```text filename="Prompt" copy
+三个人三天喝了三桶水，请问九个人九天喝了几桶水？请直接给出你的答案。
+```
+
+因为大部分Ai在面对这种问题通常会在系统的预设Prompt里面增加思维链技术，所以为了更好的展示思维链技术，我们需要在Prompt中阻止Ai思考，让它直接给出答案。
+
+最终Ai输出的答案是：9桶水，这明显是错误的答案。
+
+<Callout>
+对于这种复杂的推理问题，类似于 GPT3.5 这样的模型是很难回答正确的，我们不仅需要告诉它一步一步分析，还需要在关键的地方给它进行一定的 **指导**。就像我们面对一个什么都能干的实习生，他处理一个复杂的问题怎么都弄不好，让他自己去想一想也想不明白，这时候我们就需要给他一定的指导，得到这个指导后，他就能正确的处理这个问题了。
+</Callout>
+
+修改我们的Prompt：
+
+```text filename="Prompt" copy
+三个人三天喝了三桶水，请问九个人九天喝了几桶水？
+
+请先进行思考，然后一步一步的分析，最终给出正确答案：
+
+1. 你需要先计算出三个人一天喝了多少水
+2. 计算出一个人一天需要喝多少水
+3. 结合1和2的结果，计算出九个人九天需要喝多少水
+```
+
+最终 GPT3.5 这样没那么强大的模型，也能得到正确的答案 🎉
+
+<br />
+
+<Screenshot src={drink_result} alt="三个人三天喝了三桶水，九个人九天喝了几桶水？" />
+
+<br />
+
+## 更好的处理思考过程
+
+为了更容易的将 Ai 的逐步推理与其最终响应分开，我们可以考虑使用 XML 标签，如 `<thinking>` 和 `<answer>`。可以在Prompt中指示 Ai 将思考过程放在 `<thinking>` 标签内，将最终答案放在 `<answer>` 标签内。
+
+这是一个使用此方法的示例提示：
+
+```text filename="Prompt" copy
+[Prompt的其余部分] 在回答问题之前，请在 <thinking></thinking> 标签内逐步思考。然后，在 <answer></answer> 标签内提供你的最终答案。
+```
+
+这样Ai的输出格式大概是这样的：
+
+```text filename="ChatGPT" copy
+<thinking>
+[逐步推理问题]
+</thinking>
+
+<answer>[最终答案]</answer>
+```
+
+这样如果我们后续有需要，可是使用代码，轻易的提取 `<answer></answer>` 中的内容，而对用户或其他人屏蔽 `<thinking></thinking>` 过程。
+
+<WeChatContact />
