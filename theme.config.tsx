@@ -50,6 +50,32 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/CarGod/gptpmt',
   },
+  navbar: {
+    extraContent: (
+      <a
+        href="/gpt-to-image"
+        style={{
+          marginLeft: '1rem',
+          padding: '0.5rem 1rem',
+          backgroundColor: '#0070f3',
+          color: 'white',
+          borderRadius: '0.375rem',
+          textDecoration: 'none',
+          fontSize: '0.875rem',
+          fontWeight: '500',
+          transition: 'background-color 0.2s',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = '#0051cc'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = '#0070f3'
+        }}
+      >
+        📸 GPT to Image
+      </a>
+    )
+  },
   docsRepositoryBase: 'https://github.com/CarGod/gptpmt',
   footer: {
     text: 'Copyright © 2023 Luffy Liu',

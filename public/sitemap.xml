@@ -1,62 +1,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000/about</loc>
+    <loc>undefined/about</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/advance</loc>
+    <loc>undefined/advance</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/contact</loc>
+    <loc>undefined/contact</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/foundation</loc>
+    <loc>undefined/foundation</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/index</loc>
+    <loc>undefined/index</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/practice</loc>
+    <loc>undefined/practice</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/preface</loc>
+    <loc>undefined/preface</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/foundation/grammar</loc>
+    <loc>undefined/advance/let_think</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/foundation/json_format</loc>
+    <loc>undefined/advance/use_xml</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/foundation/structured</loc>
+    <loc>undefined/foundation/grammar</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/preface/basics_probability</loc>
+    <loc>undefined/foundation/json_format</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/preface/basics_token</loc>
+    <loc>undefined/foundation/structured</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/preface/hello</loc>
+    <loc>undefined/preface/basics_probability</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/advance/let_think</loc>
+    <loc>undefined/preface/basics_token</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>http://localhost:3000/advance/use_xml</loc>
+    <loc>undefined/preface/hello</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>
