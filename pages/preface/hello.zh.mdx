@@ -1,60 +1,67 @@
-# Hello ChatGPT
+# 第一次对话
 
 import { NextSeo } from "next-seo";
 import { Callout } from "nextra-theme-docs";
-import { Screenshot } from "../../components/screenshot";
 import { WeChatContact } from "../../components/wechat";
-import hello1 from "../../img/preface/hello-1.png";
 
 <NextSeo
+  title="第一次与大语言模型对话"
+  description="从一个简单 Prompt 开始，了解输入、输出、随机性和结果验证，并建立安全使用大语言模型的基本习惯。"
   canonical="https://gptpmt.com/preface/hello"
   openGraph={{
-    title: "Hello ChatGPT | GPTPMT",
+    title: "第一次与大语言模型对话 | GPTPMT",
     url: "https://gptpmt.com/preface/hello",
     description:
-      "本文介绍了在自然语言编程中使用ChatGPT进行对话的开端。通过输入指定的Prompt并与ChatGPT进行对话，体验ChatGPT的回复和交互过程。适合对自然语言编程感兴趣的读者。",
+      "从一个简单 Prompt 开始，了解输入、输出、随机性和结果验证，并建立安全使用大语言模型的基本习惯。",
     type: "article",
     article: {
       authors: ["Luffy Liu"],
-      tags: ["Prompt Engineering", "AI", "GPT", "ChatGPT"],
+      tags: ["Prompt", "提示工程", "大语言模型", "入门"],
     },
   }}
 />
 
-在过去，每一门编程语言的学习，总是以一个：`Hello, World.` 的例子开始。
+学习许多编程语言时，第一个例子是 `Hello, World.`。学习与大语言模型协作，也可以从一条简单指令开始。
 
-今天，我们遵循这个传统，打开自然语言编程的大门。
-
-打开 ChatGPT，输入下面的 Prompt
+打开你使用的官方大语言模型产品，输入：
 
 ```text filename="Prompt" copy
-Hello, ChatGPT.
+你好。请用一句话介绍你能帮助我完成哪些任务，并提醒我使用时最需要注意的一件事。
 ```
 
-```text filename="ChatGPT" copy
-Hello! How can I assist you today?
-```
+不同产品和模型给出的回答可能不同。即使在同一个产品里重复发送，措辞也不一定完全一致。这不代表 Prompt 一定有问题；生成式模型的输出会受到模型、上下文和采样方式等因素影响。
 
 <Callout type="info">
-  在本教程中，发送给 ChatGPT的内容均使用 `Prompt` 表示；ChatGPT 回复的内容 使用
-  `ChatGPT` 表示。
+  本教程把发送给模型的内容称为 Prompt，把模型返回的内容称为输出。产品界面、按钮和模型名称会变化，因此我们重点学习可以迁移的任务表达与验证方法。
 </Callout>
 
-如果你使用的是 ChatGPT，那应当会看到如下的对话内容：
+## 做一次简单检查
 
-<Screenshot src={hello1} alt="ChatGPT" />
+看到输出后，不要只判断“读起来顺不顺”，还可以检查：
 
-<Callout>
-  ChatGPT回复你的内容可能不是 **`Hello! How can I assist you today?`**
-  不必担心，并不是你的Prompt有问题，而是GPT本身具有随机性，后面的课程我们会详细介绍。
+- 它是否真的只使用一句话；
+- 它列出的能力是否与当前产品一致；
+- 它是否给出了安全或事实核验提醒；
+- 如果有不确定表述，是否应该查阅官方说明。
+
+这就是提示工程最基础的循环：提出任务、观察结果、发现偏差、修改要求、再次验证。
+
+## 再试一次更具体的输入
+
+```text filename="Prompt" copy
+请把下面这句话改得更清楚，保留原意，不增加新事实。输出修改后的句子，并用一个要点说明你改了什么。
+
+原句：这个功能好像有时候可能会不太稳定。
+```
+
+与第一条 Prompt 相比，这次我们明确了输入、限制和输出格式。后面的章节会继续说明这些信息为什么重要。
+
+<Callout type="warning" emoji="🔐">
+  练习时请使用虚构或公开内容。不要提交密码、API 密钥、商业机密、身份证明或不必要的个人信息。
 </Callout>
-
-恭喜 🎉，你已经完成了自己第一个 Prompt 的编写，从此刻起，你已经是一位 Prompt Engineer 了 😄
 
 <Callout type="info" emoji="💬">
-  恭喜学完本章节，欢迎到 [Github
-  issues](https://github.com/CarGod/gptpmt/issues/new?labels=feedback)
-  发表学习心得以及反馈问题 👏🏻
+  完成本章后，你已经可以开始编写和改进 Prompt。下一步，我们会理解模型怎样把文字转换成 Token。
 </Callout>
 
 <WeChatContact />

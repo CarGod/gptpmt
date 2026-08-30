@@ -27,15 +27,9 @@ const config: DocsThemeConfig = {
     const { title } = useConfig()
     return (
       <>
-        <title>{title ? title + ' | GPTPMT' : 'GPTPMT'}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content={title ? title + ' | GPTPMT' : 'GPTPMT'} />
         <meta name="baidu-site-verification" content="codeva-HYkljzisrI" />
         <meta name="msvalidate.01" content="8CC7334366FD7EDEF9575DB293A02096" />
-        <meta
-          name="og:title"
-          content={title ? title + ' | GPTPMT' : 'GPTPMT'}
-        />
         <link rel="icon" href="/chatgpt-light.svg" type="image/svg+xml" />
 
         <link
@@ -47,6 +41,10 @@ const config: DocsThemeConfig = {
       </>
     )
   },
+  useNextSeoProps: () => ({
+    titleTemplate: '%s | GPTPMT',
+    defaultTitle: 'GPTPMT — 免费中文提示工程指南',
+  }),
   project: {
     link: 'https://github.com/CarGod/gptpmt',
   },
@@ -78,10 +76,10 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/CarGod/gptpmt',
   footer: {
-    text: 'Copyright © 2023 Luffy Liu',
+    text: 'Copyright © 2023–2026 Luffy Liu',
   },
   search: {
-    placeholder: 'Search documentation...',
+    placeholder: '搜索教程…',
   }
 }
 

@@ -1,5 +1,5 @@
 {
-  "hello": "Hello ChatGPT",
-  "basics_token": "什么是Tokens？",
-  "basics_probability": "概率和温度"
+  "hello": "第一次对话",
+  "basics_token": "什么是 Token？",
+  "basics_probability": "概率、采样与 Temperature"
 }

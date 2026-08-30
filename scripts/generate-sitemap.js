@@ -1,30 +1,43 @@
 const fs = require('fs');
 const globby = require('globby');
 
-function addPage(page) {
-  const path = page.replace('pages', '').replace('.js', '').replace('.mdx', '');
-  const route = path === '/index' ? '' : path;
+const siteUrl = (process.env.WEBSITE_URL || 'https://gptpmt.com').replace(/\/+$/, '');
 
-  const url = `${process.env.WEBSITE_URL}${route.split('.').shift()}`;
+function addPage(page) {
+  let route = page
+    .replace(/^pages/, '')
+    .replace(/\.(?:js|jsx|ts|tsx|md|mdx)$/, '')
+    .replace(/\.zh$/, '');
+
+  if (route === '/index') route = '/';
+  if (route.endsWith('/index')) route = route.slice(0, -'/index'.length) || '/';
+
+  const url = route === '/' ? `${siteUrl}/` : `${siteUrl}${route}`;
 
   return `  <url>
     <loc>${url}</loc>
-    <changefreq>hourly</changefreq>
+    <changefreq>weekly</changefreq>
   </url>`;
 }
 
 async function generateSitemap() {
   // Ignore Next.js specific files (e.g., _app.js) and API routes.
   const pages = await globby([
-    'pages/**/*{.js,.mdx}',
-    '!pages/_*.js',
-    '!pages/api',
+    'pages/**/*.{js,jsx,ts,tsx,md,mdx}',
+    '!pages/**/_*.*',
+    '!pages/api/**',
+    '!pages/practice.zh.mdx',
   ]);
-  const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join('\n')}
-</urlset>`;
+</urlset>
+`;
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
 }
 
-generateSitemap();
+generateSitemap().catch((error) => {
+  console.error('Failed to generate sitemap:', error);
+  process.exitCode = 1;
+});

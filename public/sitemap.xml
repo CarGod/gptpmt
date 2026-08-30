@@ -1,62 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>undefined/about</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/about</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/advance</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/advance</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/contact</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/contact</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/foundation</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/foundation</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/index</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/gpt-to-image</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/practice</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/preface</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/preface</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/advance/let_think</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/advance/let_think</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/advance/use_xml</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/advance/use_xml</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/foundation/grammar</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/foundation/grammar</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/foundation/json_format</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/foundation/json_format</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/foundation/structured</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/foundation/structured</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/preface/basics_probability</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/preface/basics_probability</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/preface/basics_token</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/preface/basics_token</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>undefined/preface/hello</loc>
-    <changefreq>hourly</changefreq>
+    <loc>https://gptpmt.com/preface/hello</loc>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>
