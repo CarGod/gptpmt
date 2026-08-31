@@ -23,7 +23,7 @@
     "globby": "^11.0.1",
     "html2canvas": "^1.4.1",
     "markdown-it": "^14.1.0",
-    "next": "latest",
+    "next": "15.5.8",
     "next-seo": "^6.1.0",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
