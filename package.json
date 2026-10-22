@@ -4,6 +4,7 @@
   "description": "GPT Prompt",
   "scripts": {
     "dev": "next dev",
+    "test": "node tests/markdown-security.cjs",
     "build": "next build",
     "start": "next start"
   },
@@ -22,7 +23,7 @@
     "@vercel/analytics": "^1.0.1",
     "globby": "^11.0.1",
     "html2canvas": "^1.4.1",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.3.3",
     "next": "latest",
     "next-seo": "^6.1.0",
     "nextra": "^2.13.4",
